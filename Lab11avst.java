@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 
 public class Lab11avst
+
 {
     public static void main(String[] args)
     {
@@ -22,6 +23,24 @@ public class Lab11avst
     public static void computePrimes(boolean primes[])
     {
         System.out.println("\nCOMPUTING PRIME NUMBERS");
+        // Step 1: Treat all numbers as Prime
+        // Write a loop that changes ALL numbers to prime (true) in the array
+        for(int k = 2; k < primes.length; k++){
+            // Change all the values to true here
+            primes[k] = true;
+        }
+
+        // Step 2: This is where you remove the primes
+        // To start, JUST remove the multiples of 2
+        for(int k = 2 * 2; k < primes.length; k+=2){
+            primes[k] = false;
+        }
+        for(int k = 3 * 2; k < primes.length; k+=3){
+            primes[k] = false;
+        }
+        for(int k = 4 * 2; k < primes.length; k+=4){
+            primes[k] = false;
+        }
 
     }
 
@@ -30,9 +49,19 @@ public class Lab11avst
         System.out.println("\n\nPRIMES BETWEEN 1 AND "+ primes.length);
         System.out.println();
 
+        for(int k = 2; k < primes.length; k++){
+            if(primes[k] == true){
+                System.out.print(k + " ");
+
+            }
+
+        }
+
     }
 
 }
+
+
 
 
 
