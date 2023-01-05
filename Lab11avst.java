@@ -35,10 +35,7 @@ public class Lab11avst
         for(int k = 2 * 2; k < primes.length; k+=2){
             primes[k] = false;
         }
-        for(int k = 3 * 2; k < primes.length; k+=3){
-            primes[k] = false;
-        }
-        for(int k = 4 * 2; k < primes.length; k+=4){
+        for(int k = 3; k < primes.length; k+=3){
             primes[k] = false;
         }
 
@@ -51,6 +48,7 @@ public class Lab11avst
 
         for(int k = 2; k < primes.length; k++){
             if(primes[k] == true){
+
                 System.out.print(k + " ");
 
             }
